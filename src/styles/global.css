@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Work Sans", sans-serif;
+
+  --color-bg: #F7F5EF;
+  --color-ink: #15140F;
+  --color-card: #EAE6D9;
+  --color-accent: #3F6C4E;
+}
