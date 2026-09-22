@@ -57,34 +57,6 @@ const entries = [
   id="education"
   class="relative overflow-hidden px-6 py-24 md:px-12 md:py-32"
 >
-  <!-- Crossfading atmosphere layers -->
-  <div class="pointer-events-none absolute inset-0 -z-10">
-    <div
-      data-bg="ece"
-      class="edu-layer absolute inset-0 transition-opacity duration-500 ease-out"
-      style="opacity:1; background: linear-gradient(180deg, #eaf6ff 0%, #f7f5ef 100%);"
-    >
-      <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/60 blur-3xl"></div>
-    </div>
-
-    <div
-      data-bg="hanyang"
-      class="edu-layer absolute inset-0 transition-opacity duration-500 ease-out"
-      style="opacity:0; background: linear-gradient(180deg, #0b0b17 0%, #1a1030 100%);"
-    >
-      <div class="absolute left-1/4 top-1/3 h-64 w-64 rounded-full bg-fuchsia-500/30 blur-3xl"></div>
-      <div class="absolute right-1/4 bottom-1/4 h-56 w-56 rounded-full bg-cyan-400/20 blur-3xl"></div>
-    </div>
-
-    <div
-      data-bg="lycee"
-      class="edu-layer absolute inset-0 transition-opacity duration-500 ease-out"
-      style="opacity:0; background: linear-gradient(180deg, #f1e7d0 0%, #e1d2ae 100%);"
-    >
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(59,47,30,0.15)_100%)]"></div>
-    </div>
-  </div>
-
   <h2 class="mb-16 font-display text-3xl font-bold text-ink md:mb-24 md:text-4xl">
     Education
   </h2>
@@ -94,7 +66,11 @@ const entries = [
 
     <div class="flex flex-col gap-20 md:gap-28">
       {entries.map((entry, i) => (
-        <div class="timeline-entry relative" data-theme={entry.theme}>
+        <div
+          class="timeline-entry relative"
+          data-theme={entry.theme}
+          data-page-theme={entry.theme}
+        >
           <span
             class="absolute left-4 top-2 h-3.5 w-3.5 -translate-x-1/2 rounded-full md:left-1/2"
             style={`background: ${entry.accent};`}
@@ -164,59 +140,3 @@ const entries = [
     </div>
   </div>
 </section>
-
-<script>
-  const section = document.getElementById("education");
-  const layers = {
-    ece: section?.querySelector('[data-bg="ece"]') as HTMLElement | null,
-    hanyang: section?.querySelector(
-      '[data-bg="hanyang"]',
-    ) as HTMLElement | null,
-    lycee: section?.querySelector('[data-bg="lycee"]') as HTMLElement | null,
-  };
-  const items = Array.from(
-    section?.querySelectorAll<HTMLElement>(".timeline-entry") ?? [],
-  );
-
-  let running = false;
-
-  function smoothstep(t: number) {
-    t = Math.min(Math.max(t, 0), 1);
-    return t * t * (3 - 2 * t);
-  }
-
-  function update() {
-    if (!running) return;
-
-    const viewportCenter = window.innerHeight / 2;
-    const maxDist = window.innerHeight * 0.9;
-    const activation: Record<string, number> = { ece: 0, hanyang: 0, lycee: 0 };
-
-    items.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      const center = rect.top + rect.height / 2;
-      const dist = Math.abs(center - viewportCenter);
-      const t = smoothstep(1 - dist / maxDist);
-      const theme = el.dataset.theme as string;
-      activation[theme] = Math.max(activation[theme], t);
-    });
-
-    (Object.entries(layers) as [string, HTMLElement | null][]).forEach(
-      ([theme, layer]) => {
-        if (layer) layer.style.opacity = String(activation[theme]);
-      },
-    );
-
-    requestAnimationFrame(update);
-  }
-
-  const sectionObserver = new IntersectionObserver(
-    ([e]) => {
-      running = e.isIntersecting;
-      if (running) requestAnimationFrame(update);
-    },
-    { threshold: 0 },
-  );
-
-  if (section) sectionObserver.observe(section);
-</script>

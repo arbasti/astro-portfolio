@@ -1,6 +1,7 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 ---
+
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -8,9 +9,89 @@ import '../styles/global.css'
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-bg text-ink font-body">
+    <div id="ambient" class="fixed inset-0 -z-10 pointer-events-none">
+      <div
+        data-layer="hero"
+        class="ambient-layer"
+        style="opacity:1; background: linear-gradient(180deg, #F7F5EF 0%, #F7F5EF 100%);"
+      ></div>
+      <div
+        data-layer="ece"
+        class="ambient-layer"
+        style="opacity:0; background: linear-gradient(180deg, #EAF6FF 0%, #F7F5EF 100%);"
+      ></div>
+      <div
+        data-layer="hanyang"
+        class="ambient-layer"
+        style="opacity:0; background: linear-gradient(180deg, #0B0B17 0%, #1A1030 100%);"
+      ></div>
+      <div
+        data-layer="lycee"
+        class="ambient-layer"
+        style="opacity:0; background: linear-gradient(180deg, #F1E7D0 0%, #E1D2AE 100%);"
+      ></div>
+    </div>
     <slot />
+    <script>
+      function smoothstep(t: number) {
+        t = Math.min(Math.max(t, 0), 1);
+        return t * t * (3 - 2 * t);
+      }
+
+      const layers = Object.fromEntries(
+        Array.from(
+          document.querySelectorAll<HTMLElement>("#ambient .ambient-layer"),
+        ).map((el) => [el.dataset.layer as string, el]),
+      );
+
+      let zones: HTMLElement[] = [];
+      function collectZones() {
+        zones = Array.from(
+          document.querySelectorAll<HTMLElement>("[data-page-theme]"),
+        );
+      }
+
+      let ticking = false;
+      function update() {
+        const center = window.innerHeight / 2;
+        const maxDist = window.innerHeight * 0.9;
+        const activation: Record<string, number> = {};
+
+        zones.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          const c = rect.top + rect.height / 2;
+          const dist = Math.abs(c - center);
+          const t = smoothstep(1 - dist / maxDist);
+          const theme = el.dataset.pageTheme as string;
+          activation[theme] = Math.max(activation[theme] ?? 0, t);
+        });
+
+        Object.entries(layers).forEach(([theme, el]) => {
+          el.style.opacity = String(activation[theme] ?? 0);
+        });
+
+        ticking = false;
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(update);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        collectZones();
+        update();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+      });
+    </script>
   </body>
 </html>
