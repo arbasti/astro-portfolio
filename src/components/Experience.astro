@@ -1,0 +1,108 @@
+---
+const experiences = [
+  {
+    company: "Air Liquide",
+    logo: "/experience/air-liquide.png",
+    role: "Enterprise Architecture Intern",
+    location: "La Défense, Paris",
+    period: "April – August 2026",
+    duration: "4 months",
+    highlights: [
+      "Helped clean up and map nearly 450 applications across Air Liquide's European IT landscape, assessing risk, cost, and ownership.",
+      "Turned that work into architecture diagrams and a company-wide framework that made it in front of the executive committee.",
+      "Also tracked down shadow IT costs across the organization and presented recommendations to leadership.",
+    ],
+    tags: [
+      "Enterprise Architecture",
+      "LeanIX",
+      "ServiceNow",
+      "SAP S/4HANA",
+      "drawIO",
+      "BPML",
+      "Shadow IT",
+      "GAMP 5",
+    ],
+  },
+  {
+    company: "SFA Tech",
+    logo: "/experience/sfa.webp",
+    role: "Data & AI Intern",
+    location: "Paris, France",
+    period: "June – July 2025",
+    duration: "1 months",
+    highlights: [
+      "Automated document workflows and built an email-archiving pipeline, connecting tools like Python, Make.com, and Power Apps.",
+      "Used Claude AI to help streamline how incoming CVs got sorted for candidate screening.",
+      "Researched cybersecurity best practices based on MITRE frameworks.",
+    ],
+    tags: [
+      "Python",
+      "Make.com",
+      "Power Apps",
+      "Monday.com",
+      "Outlook",
+      "Box.com",
+      "Claude AI",
+    ],
+  },
+];
+---
+
+<section
+  id="experience"
+  data-page-theme="experience"
+  class="mx-auto max-w-5xl px-6 py-24 md:px-12 md:py-32"
+>
+  <h2 class="mb-16 font-display text-3xl font-bold text-ink md:mb-20 md:text-4xl">
+    Experience
+  </h2>
+
+  <div class="flex flex-col gap-10">
+    {experiences.map((exp) => (
+      <div class="rounded-2xl border border-ink/10 bg-card/60 p-8 md:p-10">
+        <div class="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+          <div class="flex items-center gap-4">
+            <div class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl bg-white p-2.5 md:h-20 md:w-20 md:p-3">
+              <img
+                src={exp.logo}
+                alt={`${exp.company} logo`}
+                class="h-full w-full object-contain"
+              />
+            </div>
+            <div>
+              <h3 class="font-display text-xl font-bold text-ink md:text-2xl">
+                {exp.role}
+              </h3>
+              <p class="mt-1 text-base font-semibold text-accent">
+                {exp.company}
+              </p>
+            </div>
+          </div>
+          <div class="text-sm text-ink/60 md:text-right">
+            <p>
+              {exp.period} <span class="text-ink/40">· {exp.duration}</span>
+            </p>
+            <p>{exp.location}</p>
+          </div>
+        </div>
+
+        <ul class="mt-6 flex flex-col gap-3">
+          {exp.highlights.map((point) => (
+            <li class="flex gap-3 text-sm leading-relaxed text-ink/70">
+              <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+              {point}
+            </li>
+          ))}
+        </ul>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          {exp.tags.map((tag) => (
+            <span class="rounded-full border border-accent/30 px-3 py-1 text-xs font-semibold text-accent">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
