@@ -1,71 +1,10 @@
 ---
-const projects = [
-  {
-    title: "This portfolio",
-    description:
-      "The site you're on right now — built from scratch with Astro and Tailwind, featuring a scroll-driven timeline, an ambient color system, and a playable Snake game.",
-    status: "in-progress",
-    duration: null,
-    tags: ["Astro", "Tailwind", "TypeScript"],
-    images: [
-      "./projects/astro-portfolio/astro-portfolio.png",
-      "./projects/astro-portfolio/astro-portfolio.png",
-    ],
-    github: "https://github.com/arbasti/astro-portfolio",
-    website: null,
-    brief: null,
-    slides: null,
-    size: "lg",
-    spotlight: true,
-  },
-  {
-    title: "webtech-109",
-    description:
-      "A full-stack monorepo built during my web technologies coursework — Node/Express API, React/Next.js frontend, Supabase for storage.",
-    status: "completed",
-    duration: "1 semester",
-    tags: ["Node.js", "Express", "Next.js", "Supabase", "Tailwind"],
-    images: [
-      "./projects/webtech-109/home.png",
-      "./projects/webtech-109/profile.png",
-    ],
-    github: "https://github.com/arbasti/webtech-109",
-    website: "https://webtech-109.vercel.app/",
-    brief: null,
-    slides: null,
-    size: "sm",
-    spotlight: false,
-  },
-  {
-    title: "Solar inverter cyberattacks (PPE)",
-    description:
-      "A multidisciplinary team project (Projet Pluridisciplinaire en Équipe) at ECE Paris, investigating cybersecurity vulnerabilities in solar inverter systems.",
-    status: "completed",
-    duration: null,
-    tags: ["Cybersecurity", "Research"],
-    images: ["./projects/2ASICYA/2ASICYA.png"],
-    github: null,
-    website: null,
-    brief: null,
-    slides: null,
-    size: "sm",
-    spotlight: false,
-  },
+import { getCollection } from "astro:content";
 
-  // Add your next project here — just copy this shape:
-  // {
-  //   title: "",
-  //   description: "",
-  //   status: "completed" | "in-progress",
-  //   duration: "",
-  //   tags: [],
-  //   images: ["/projects/your-image.jpg"] or null,
-  //   github: "https://..." or null,
-  //   brief: "/projects/your-brief.pdf" or null,
-  //   slides: "/projects/your-slides.pdf" or null,
-  //   size: "sm" | "md" | "lg",
-  // },
-];
+const projectEntries = await getCollection("projects");
+const projects = projectEntries
+  .map((entry) => entry.data)
+  .sort((a, b) => a.order - b.order);
 
 const sizeClasses: Record<string, string> = {
   sm: "md:col-span-1",

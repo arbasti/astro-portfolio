@@ -1,0 +1,15 @@
+{
+  "title": "2ASICYA (PPE)",
+  "description": "A multidisciplinary team project at ECE Paris on solar inverter cyberattacks — investigating vulnerabilities in solar inverter systems and how they could be exploited.",
+  "status": "completed",
+  "duration": null,
+  "tags": ["Cybersecurity", "Research"],
+  "images": ["/projects/2ASICYA/2ASICYA.png"],
+  "github": null,
+  "website": null,
+  "brief": null,
+  "slides": null,
+  "size": "sm",
+  "spotlight": false,
+  "order": 3
+}

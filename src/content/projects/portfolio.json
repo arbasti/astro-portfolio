@@ -1,0 +1,15 @@
+{
+  "title": "This portfolio",
+  "description": "The site you're on right now — built from scratch with Astro and Tailwind, featuring a scroll-driven timeline, an ambient color system, and a playable Snake game.",
+  "status": "in-progress",
+  "duration": null,
+  "tags": ["Astro", "Tailwind", "TypeScript"],
+  "images": ["/projects/astro-portfolio/astro-portfolio.png", "/projects/astro-portfolio/astro-portfolio.png"],
+  "github": "https://github.com/arbasti/astro-portfolio",
+  "website": null,
+  "brief": null,
+  "slides": null,
+  "size": "lg",
+  "spotlight": true,
+  "order": 1
+}

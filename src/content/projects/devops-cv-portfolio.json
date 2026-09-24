@@ -1,0 +1,15 @@
+{
+  "title": "Team CV Portfolio — DevOps Pipeline",
+  "description": "A group project built with two classmates: a Next.js team CV portfolio wrapped in a full DevOps pipeline — CI/CD via GitHub Actions, Docker multi-stage builds, Kubernetes deployment, Redis-based view tracking, and infrastructure provisioning with Vagrant and Ansible.",
+  "status": "completed",
+  "duration": null,
+  "tags": ["Next.js", "Docker", "Kubernetes", "Redis", "CI/CD", "Ansible"],
+  "images": ["/projects/devops-cv-portfolio/home.png"],
+  "github": "https://github.com/arbasti/devops-cv-portfolio-project",
+  "website": "https://devops-asp.vercel.app/",
+  "brief": null,
+  "slides": null,
+  "size": "sm",
+  "spotlight": false,
+  "order": 4
+}
