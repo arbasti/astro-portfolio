@@ -30,18 +30,18 @@ const sizeClasses: Record<string, string> = {
             : "border border-ink/10 bg-card/60"
         }`}
       >
-        <div class="relative flex h-40 items-center justify-center bg-ink/5 text-sm text-ink/40">
+        <div class="relative flex h-40 items-center justify-center overflow-hidden bg-ink/5 text-sm text-ink/40">
           {project.size === "lg" && project.images.length >= 2 ? (
-            <div class="grid h-full w-full grid-cols-2 gap-1">
+            <div class="absolute inset-0 grid grid-cols-2 gap-1">
               <img
                 src={project.images[0]}
                 alt={`${project.title} — screenshot 1`}
                 loading="lazy"
                 decoding="async"
-                class="h-full w-full object-cover"
+                class="h-full w-full min-h-0 min-w-0 object-cover"
               />
               <div
-                class="swipe-gallery relative h-full w-full overflow-hidden"
+                class="swipe-gallery relative h-full min-h-0 min-w-0 overflow-hidden"
                 data-images={JSON.stringify(project.images.slice(1))}
               >
                 <img
@@ -64,7 +64,7 @@ const sizeClasses: Record<string, string> = {
             </div>
           ) : project.images.length > 0 ? (
             <div
-              class="swipe-gallery relative h-full w-full overflow-hidden"
+              class="swipe-gallery absolute inset-0 overflow-hidden"
               data-images={JSON.stringify(project.images)}
             >
               <img
