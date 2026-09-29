@@ -17,18 +17,19 @@ const sizeClasses: Record<string, string> = {
   data-page-theme="projects"
   class="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32"
 >
-  <h2 class="mb-16 font-display text-3xl font-bold text-ink md:mb-20 md:text-4xl">
+  <h2 class="reveal mb-16 font-display text-3xl font-bold text-ink md:mb-20 md:text-4xl">
     Projects
   </h2>
 
-  <div class="grid grid-cols-1 gap-6 md:grid-cols-4 md:[grid-auto-flow:dense]">
-    {projects.map((project) => (
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-4 md:grid-flow-dense">
+    {projects.map((project, i) => (
       <div
-        class={`group relative flex flex-col overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:z-10 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:shadow-ink/10 ${sizeClasses[project.size]} ${
+        class={`reveal group relative flex flex-col overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:z-10 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:shadow-ink/10 ${sizeClasses[project.size]} ${
           project.spotlight
             ? "border-2 border-accent bg-accent/5"
             : "border border-ink/10 bg-card/60"
         }`}
+        style={`transition-delay: ${i * 80}ms;`}
       >
         <div class="relative flex h-40 items-center justify-center overflow-hidden bg-ink/5 text-sm text-ink/40">
           {project.size === "lg" && project.images.length >= 2 ? (

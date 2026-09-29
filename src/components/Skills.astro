@@ -13,7 +13,7 @@ const GRID_ROWS = 10;
   data-page-theme="skills"
   class="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32"
 >
-  <h2 class="mb-16 font-display text-3xl font-bold text-ink md:mb-20 md:text-4xl">
+  <h2 class="reveal mb-16 font-display text-3xl font-bold text-ink md:mb-20 md:text-4xl">
     Skills
   </h2>
 
@@ -21,7 +21,7 @@ const GRID_ROWS = 10;
     <div class="rounded-2xl border border-ink/10 bg-ink p-4 md:p-6">
       <div
         id="snake-grid"
-        class="grid gap-[2px]"
+        class="grid gap-0.5"
         style={`grid-template-columns: repeat(${GRID_COLS}, minmax(0, 1fr)); width: min(85vw, 560px); aspect-ratio: ${GRID_COLS} / ${GRID_ROWS};`}
       >
         {Array.from({ length: GRID_COLS * GRID_ROWS }).map((_, i) => (
