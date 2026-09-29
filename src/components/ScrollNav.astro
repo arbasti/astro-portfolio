@@ -1,0 +1,73 @@
+---
+const sections = [
+  { id: "hero", label: "Intro" },
+  { id: "education", label: "Education" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+];
+---
+
+<nav
+  id="scroll-nav"
+  aria-label="Section navigation"
+  class="fixed right-8 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-4 md:flex"
+>
+  {sections.map((section) => (
+    <button
+      type="button"
+      data-target={section.id}
+      class="scroll-nav-item group flex items-center justify-end gap-3 cursor-pointer"
+    >
+      <span class="nav-label text-xs font-semibold text-ink/40 transition-all duration-300">
+        {section.label}
+      </span>
+      <span class="nav-line h-px w-6 bg-ink/30 transition-all duration-300" />
+    </button>
+  ))}
+</nav>
+
+<script>
+  const navItems = document.querySelectorAll<HTMLElement>(".scroll-nav-item");
+  const sections = Array.from(navItems)
+    .map((item) => document.getElementById(item.dataset.target!))
+    .filter((el): el is HTMLElement => el !== null);
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      document
+        .getElementById(item.dataset.target!)
+        ?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  function setActive(activeId: string) {
+    navItems.forEach((item) => {
+      const label = item.querySelector(".nav-label")!;
+      const line = item.querySelector(".nav-line")!;
+      const isActive = item.dataset.target === activeId;
+
+      label.classList.toggle("text-ink/40", !isActive);
+      label.classList.toggle("text-accent", isActive);
+      label.classList.toggle("text-sm", isActive);
+      label.classList.toggle("text-xs", !isActive);
+      label.classList.toggle("font-bold", isActive);
+
+      line.classList.toggle("bg-ink/30", !isActive);
+      line.classList.toggle("bg-accent", isActive);
+      line.classList.toggle("w-6", !isActive);
+      line.classList.toggle("w-10", isActive);
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    { rootMargin: "-50% 0px -50% 0px", threshold: 0 },
+  );
+
+  sections.forEach((section) => observer.observe(section));
+</script>
