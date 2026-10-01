@@ -1,0 +1,24 @@
+{
+  "company": "Air Liquide",
+  "logo": "/experience/air-liquide.png",
+  "role": "Enterprise Architecture Intern",
+  "location": "La Défense, Paris",
+  "period": "April – August 2026",
+  "duration": "4 months",
+  "highlights": [
+    "Helped clean up and map nearly 450 applications across Air Liquide's European IT landscape, assessing risk, cost, and ownership.",
+    "Turned that work into architecture diagrams and a company-wide framework that made it in front of the executive committee.",
+    "Also tracked down shadow IT costs across the organization and presented recommendations to leadership."
+  ],
+  "tags": [
+    "Enterprise Architecture",
+    "LeanIX",
+    "ServiceNow",
+    "SAP S/4HANA",
+    "drawIO",
+    "BPML",
+    "Shadow IT",
+    "GAMP 5"
+  ],
+  "order": 1
+}

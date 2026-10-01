@@ -1,0 +1,23 @@
+{
+  "company": "SFA Tech",
+  "logo": "/experience/sfa.webp",
+  "role": "Data & AI Intern",
+  "location": "Paris, France",
+  "period": "June – July 2025",
+  "duration": "1 month",
+  "highlights": [
+    "Automated document workflows and built an email-archiving pipeline, connecting tools like Python, Make.com, and Power Apps.",
+    "Used Claude AI to help streamline how incoming CVs got sorted for candidate screening.",
+    "Researched cybersecurity best practices based on MITRE frameworks."
+  ],
+  "tags": [
+    "Python",
+    "Make.com",
+    "Power Apps",
+    "Monday.com",
+    "Outlook",
+    "Box.com",
+    "Claude AI"
+  ],
+  "order": 2
+}

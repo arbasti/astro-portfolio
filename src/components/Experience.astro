@@ -1,51 +1,10 @@
 ---
-const experiences = [
-  {
-    company: "Air Liquide",
-    logo: "/experience/air-liquide.png",
-    role: "Enterprise Architecture Intern",
-    location: "La Défense, Paris",
-    period: "April – August 2026",
-    duration: "4 months",
-    highlights: [
-      "Helped clean up and map nearly 450 applications across Air Liquide's European IT landscape, assessing risk, cost, and ownership.",
-      "Turned that work into architecture diagrams and a company-wide framework that made it in front of the executive committee.",
-      "Also tracked down shadow IT costs across the organization and presented recommendations to leadership.",
-    ],
-    tags: [
-      "Enterprise Architecture",
-      "LeanIX",
-      "ServiceNow",
-      "SAP S/4HANA",
-      "drawIO",
-      "BPML",
-      "Shadow IT",
-      "GAMP 5",
-    ],
-  },
-  {
-    company: "SFA Tech",
-    logo: "/experience/sfa.webp",
-    role: "Data & AI Intern",
-    location: "Paris, France",
-    period: "June – July 2025",
-    duration: "1 months",
-    highlights: [
-      "Automated document workflows and built an email-archiving pipeline, connecting tools like Python, Make.com, and Power Apps.",
-      "Used Claude AI to help streamline how incoming CVs got sorted for candidate screening.",
-      "Researched cybersecurity best practices based on MITRE frameworks.",
-    ],
-    tags: [
-      "Python",
-      "Make.com",
-      "Power Apps",
-      "Monday.com",
-      "Outlook",
-      "Box.com",
-      "Claude AI",
-    ],
-  },
-];
+import { getCollection } from "astro:content";
+
+const experienceEntries = await getCollection("experience");
+const experiences = experienceEntries
+  .map((entry) => entry.data)
+  .sort((a, b) => a.order - b.order);
 ---
 
 <section
