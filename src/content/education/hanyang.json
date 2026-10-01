@@ -1,0 +1,15 @@
+{
+  "theme": "hanyang",
+  "accent": "#FF4FA0",
+  "wide": false,
+  "image": "/education/hanyang.webp",
+  "imageAlt": "Hanyang University campus",
+  "meta": "Ansan, South Korea • Aug–Dec 2024",
+  "title": "Hanyang University",
+  "subtitle": "Exchange Program — Computer Science",
+  "description": "One semester abroad as part of ECE Paris' international track.",
+  "highlights": "Deep Learning, Numerical Analysis, UI/UX Design, English for Engineers, Survival Korean.",
+  "project": null,
+  "story": "This is where my passion for Korean culture really started — I came back and kept learning the language on my own ever since.",
+  "order": 2
+}

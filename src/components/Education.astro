@@ -1,56 +1,10 @@
 ---
-const entries = [
-  {
-    theme: "ece",
-    accent: "#2E6F9E",
-    wide: true,
-    image: "/education/ece.jpg",
-    imageAlt: "ECE Paris campus",
-    meta: "Paris, France • 2022–2027",
-    title: "ECE Paris",
-    subtitle: "Engineering Degree in Computer Science — Cybersecurity Major",
-    description:
-      "Five-year engineering program, specializing in cybersecurity through the International Track.",
-    highlights:
-      "A broad engineering foundation in the first years (math, electronics, physics, programming), followed by a deep dive into cybersecurity: Cryptography, Network & Cloud Security, DevOps with SRE, Windows/Linux Security, SOC Analysis, Machine Learning, and even LLMs for Cybersecurity.",
-    project:
-      "End-of-studies project (PPE): research on cyber-attacks targeting solar inverters.",
-    story:
-      "A brand new chapter of my life — I met incredible people, made the friends I still have today, learned what it means to be a nerd pulling all-nighters on projects, and still found time to socialize at parties.",
-  },
-  {
-    theme: "hanyang",
-    accent: "#FF4FA0",
-    image: "/education/hanyang.jpeg",
-    imageAlt: "Hanyang University campus",
-    meta: "Ansan, South Korea • Aug–Dec 2024",
-    title: "Hanyang University",
-    subtitle: "Exchange Program — Computer Science",
-    description:
-      "One semester abroad as part of ECE Paris' international track.",
-    highlights:
-      "Deep Learning, Numerical Analysis, UI/UX Design, English for Engineers, Survival Korean.",
-    project: null,
-    story:
-      "This is where my passion for Korean culture really started — I came back and kept learning the language on my own ever since.",
-  },
-  {
-    theme: "lycee",
-    accent: "#8B5E34",
-    image: "/education/moliere.jpg",
-    imageAlt: "Paris cityscape",
-    meta: "Paris, France • 2019–2022",
-    title: "Lycée Molière",
-    subtitle: "French Baccalauréat & Spanish Bachillerato",
-    description:
-      "Dual French-Spanish diploma track, specializing in Mathematics and Computer Science.",
-    highlights:
-      "My Spanish grew exponentially here, alongside a deep dive into Hispanic culture — history, literature, and everything in between.",
-    project: null,
-    story:
-      "These were also the years I first got my hands on real code, thanks to a wonderful teacher — and that's where my love for it was born.",
-  },
-];
+import { getCollection } from "astro:content";
+
+const educationEntries = await getCollection("education");
+const entries = educationEntries
+  .map((entry) => entry.data)
+  .sort((a, b) => a.order - b.order);
 ---
 
 <section

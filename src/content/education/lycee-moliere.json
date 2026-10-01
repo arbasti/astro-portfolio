@@ -1,0 +1,15 @@
+{
+  "theme": "lycee",
+  "accent": "#8B5E34",
+  "wide": false,
+  "image": "/education/moliere.webp",
+  "imageAlt": "Paris cityscape",
+  "meta": "Paris, France • 2019–2022",
+  "title": "Lycée Molière",
+  "subtitle": "French Baccalauréat & Spanish Bachillerato",
+  "description": "Dual French-Spanish diploma track, specializing in Mathematics and Computer Science.",
+  "highlights": "My Spanish grew exponentially here, alongside a deep dive into Hispanic culture — history, literature, and everything in between.",
+  "project": null,
+  "story": "These were also the years I first got my hands on real code, thanks to a wonderful teacher — and that's where my love for it was born.",
+  "order": 3
+}

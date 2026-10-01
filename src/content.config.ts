@@ -28,4 +28,23 @@ const skills = defineCollection({
   }),
 });
 
-export const collections = { projects, skills };
+const education = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "./src/content/education" }),
+  schema: z.object({
+    theme: z.string(),
+    accent: z.string(),
+    wide: z.boolean().default(false),
+    image: z.string(),
+    imageAlt: z.string(),
+    meta: z.string(),
+    title: z.string(),
+    subtitle: z.string(),
+    description: z.string(),
+    highlights: z.string(),
+    project: z.string().nullable(),
+    story: z.string().nullable(),
+    order: z.number(),
+  }),
+});
+
+export const collections = { projects, skills, education };

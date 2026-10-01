@@ -1,0 +1,15 @@
+{
+  "theme": "ece",
+  "accent": "#2E6F9E",
+  "wide": true,
+  "image": "/education/ece.webp",
+  "imageAlt": "ECE Paris campus",
+  "meta": "Paris, France • 2022–2027",
+  "title": "ECE Paris",
+  "subtitle": "Engineering Degree in Computer Science — Cybersecurity Major",
+  "description": "Five-year engineering program, specializing in cybersecurity through the International Track.",
+  "highlights": "A broad engineering foundation in the first years (math, electronics, physics, programming), followed by a deep dive into cybersecurity: Cryptography, Network & Cloud Security, DevOps with SRE, Windows/Linux Security, SOC Analysis, Machine Learning, and even LLMs for Cybersecurity.",
+  "project": "End-of-studies project (PPE): research on cyber-attacks targeting solar inverters.",
+  "story": "A brand new chapter of my life — I met incredible people, made the friends I still have today, learned what it means to be a nerd pulling all-nighters on projects, and still found time to socialize at parties.",
+  "order": 1
+}
