@@ -56,12 +56,15 @@ const GRID_ROWS = 10;
 
   const SQL_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>`;
   const DEVOPS_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 12a4 4 0 1 1-4-4 6 6 0 0 0 4 4Z"/><path d="M6 12a4 4 0 1 0 4 4 6 6 0 0 1-4-4Z"/></svg>`;
+  const LLM_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8Z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9Z"/></svg>`;
 
   function iconMarkup(icon, cssClass) {
     if (icon === "svg:sql")
       return `<span class="${cssClass}">${SQL_SVG}</span>`;
     if (icon === "svg:devops")
       return `<span class="${cssClass}">${DEVOPS_SVG}</span>`;
+    if (icon === "svg:llm")
+      return `<span class="${cssClass}">${LLM_SVG}</span>`;
     return `<img src="${icon}" alt="" class="${cssClass}" />`;
   }
 
