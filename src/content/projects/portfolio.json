@@ -4,12 +4,12 @@
   "status": "in-progress",
   "duration": null,
   "tags": ["Astro", "Tailwind", "TypeScript"],
-  "images": ["/projects/astro-portfolio/astro-portfolio.png", "/projects/astro-portfolio/astro-portfolio.png"],
+  "images": ["/projects/astro-portfolio/cover.webp"],
   "github": "https://github.com/arbasti/astro-portfolio",
   "website": null,
   "brief": null,
   "slides": null,
   "size": "lg",
   "spotlight": true,
-  "order": 1
+  "order": 0
 }

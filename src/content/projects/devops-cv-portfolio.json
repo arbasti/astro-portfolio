@@ -4,12 +4,15 @@
   "status": "completed",
   "duration": null,
   "tags": ["Next.js", "Docker", "Kubernetes", "Redis", "CI/CD", "Ansible"],
-  "images": ["/projects/devops-cv-portfolio/home.png"],
-  "github": "https://github.com/arbasti/devops-cv-portfolio-project",
+  "images": [
+    "/projects/devops-cv-portfolio/home.webp",
+    "/projects/devops-cv-portfolio/profile.webp"
+  ],
+  "github": "https://github.com/arbasti/devops-cv-portfolio",
   "website": "https://devops-asp.vercel.app/",
   "brief": null,
   "slides": null,
   "size": "sm",
   "spotlight": false,
-  "order": 4
+  "order": 40
 }

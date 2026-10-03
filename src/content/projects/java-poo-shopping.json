@@ -1,0 +1,15 @@
+{
+  "title": "Java OOP Shopping",
+  "description": "A desktop shopping app in Java with JavaFX and MySQL — customers browse a catalog by brand, fill a cart with bulk discounts and get an invoice, while admins manage stock, promotions and client accounts. Built on MVC + DAO over JDBC as a four-person team project at ECE Paris.",
+  "status": "completed",
+  "duration": null,
+  "tags": ["Java", "JavaFX", "MySQL", "JDBC", "MVC"],
+  "images": ["/projects/java-poo-shopping/cover.webp"],
+  "github": null,
+  "website": null,
+  "brief": "/projects/java-poo-shopping/java-poo-brief.pdf",
+  "slides": "/projects/java-poo-shopping/java-poo-presentation.pdf",
+  "size": "sm",
+  "spotlight": false,
+  "order": 80
+}

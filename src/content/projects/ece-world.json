@@ -1,0 +1,21 @@
+{
+  "title": "ECE World",
+  "description": "A two-player theme park game in C with Allegro — walk around the park map, enter buildings to play mini-games, and win tickets to outlast your opponent. First-year team project at ECE Paris.",
+  "status": "completed",
+  "duration": null,
+  "tags": ["C", "Allegro", "CMake"],
+  "images": [
+    "/projects/ece-world/cover.webp",
+    "/projects/ece-world/cross-river.webp",
+    "/projects/ece-world/tir-aux-koopa.webp",
+    "/projects/ece-world/goombattack.webp",
+    "/projects/ece-world/course-hippique.webp"
+  ],
+  "github": "https://github.com/arbasti/ece-world",
+  "website": null,
+  "brief": "/projects/ece-world/ece-world-brief.pdf",
+  "slides": "/projects/ece-world/ece-world-presentation.pdf",
+  "size": "sm",
+  "spotlight": false,
+  "order": 100
+}

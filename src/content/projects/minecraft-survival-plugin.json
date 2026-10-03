@@ -1,0 +1,15 @@
+{
+  "title": "Minecraft Survival Plugin",
+  "description": "A long-running personal project to go deeper into Java on a real use case: a plugin for Minecraft survival servers. Teleportation is in place — player-to-player requests, spawn, warps and homes, all routed through a single manager handling safe-destination checks, warm-up delays and cooldowns — while teams, land protection and an economy are on the roadmap. I run it like a team project, with conventional commits, release branches, a changelog and versioned releases on GitHub.",
+  "status": "in-progress",
+  "duration": null,
+  "tags": ["Java 17", "Maven", "Spigot API", "YAML", "GitHub Releases"],
+  "images": ["/projects/minecraft-survival-plugin/cover.webp"],
+  "github": null,
+  "website": null,
+  "brief": null,
+  "slides": null,
+  "size": "lg",
+  "spotlight": true,
+  "order": 10
+}

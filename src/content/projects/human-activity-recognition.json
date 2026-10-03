@@ -1,0 +1,22 @@
+{
+  "title": "Human Activity Recognition in Videos",
+  "description": "Video classification on 12 classes of the UCF101 dataset — 14 frames extracted per clip with OpenCV, transfer learning with ImageNet-pretrained ResNet50, EfficientNetB0 and ConvNeXt using a two-phase training (frozen backbone, then fine-tuning), and per-video predictions by averaging frame probabilities. A near-perfect test score led us to identify data leakage between clips of the same scene, a key lesson in evaluation design. Three-person Machine Learning project at ECE Paris.",
+  "status": "completed",
+  "duration": null,
+  "tags": [
+    "Python",
+    "TensorFlow",
+    "Keras",
+    "OpenCV",
+    "Deep Learning",
+    "Computer Vision"
+  ],
+  "images": ["/projects/human-activity-recognition/cover.webp"],
+  "github": null,
+  "website": null,
+  "brief": "https://www.crcv.ucf.edu/data/UCF101.php",
+  "slides": "/projects/human-activity-recognition/human-activity-recognition-presentation.pdf",
+  "size": "sm",
+  "spotlight": false,
+  "order": 70
+}

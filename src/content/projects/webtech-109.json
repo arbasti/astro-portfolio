@@ -4,12 +4,15 @@
   "status": "completed",
   "duration": "1 semester",
   "tags": ["Node.js", "Express", "Next.js", "Supabase", "Tailwind"],
-  "images": ["/projects/webtech-109/home.png", "/projects/webtech-109/profile.png"],
+  "images": [
+    "/projects/webtech-109/home.webp",
+    "/projects/webtech-109/profile.webp"
+  ],
   "github": "https://github.com/arbasti/webtech-109",
   "website": "https://webtech-109.vercel.app/",
   "brief": null,
   "slides": null,
   "size": "sm",
   "spotlight": false,
-  "order": 2
+  "order": 30
 }

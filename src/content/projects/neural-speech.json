@@ -1,0 +1,15 @@
+{
+  "title": "NeuralSpeech",
+  "description": "Embedded voice recognition on an Arduino Due — the board samples a microphone at 32 kHz, filters and downsamples the audio, extracts MFCCs, and runs a neural network trained in Python to recognize spoken words and light the matching LED, with 95% accuracy. Four-person electronics project at ECE Paris.",
+  "status": "completed",
+  "duration": null,
+  "tags": ["C++", "Arduino", "Python", "DSP", "Neural Networks"],
+  "images": ["/projects/neural-speech/cover.webp"],
+  "github": "https://github.com/madmax0978/Neural-speech",
+  "website": null,
+  "brief": "/projects/neural-speech/neural-speech-brief.pdf",
+  "slides": "/projects/neural-speech/neural-speech-presentation.pdf",
+  "size": "sm",
+  "spotlight": false,
+  "order": 90
+}

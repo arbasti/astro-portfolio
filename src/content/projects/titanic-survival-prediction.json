@@ -1,0 +1,15 @@
+{
+  "title": "Titanic Survival Prediction",
+  "description": "Binary classification on Kaggle's Titanic dataset — missing-value imputation, feature engineering (passenger titles, family size, travelling alone), encoding and scaling, then a comparison of Logistic Regression, Random Forest and Gradient Boosting, reaching a 0.787 Kaggle score. Three-person Machine Learning project at ECE Paris.",
+  "status": "completed",
+  "duration": null,
+  "tags": ["Python", "pandas", "scikit-learn", "Machine Learning"],
+  "images": ["/projects/titanic-survival-prediction/cover.webp"],
+  "github": null,
+  "website": null,
+  "brief": "https://www.kaggle.com/c/titanic",
+  "slides": "/projects/titanic-survival-prediction/titanic-presentation.pdf",
+  "size": "sm",
+  "spotlight": false,
+  "order": 60
+}

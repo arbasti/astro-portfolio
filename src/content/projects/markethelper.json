@@ -1,0 +1,15 @@
+{
+  "title": "MarketHelper (PFE)",
+  "description": "Final-year engineering project with Markethings — turning their in-house natural-language engine into a real conversational assistant for sales and marketing teams. Proof of concept of an augmented RAG pipeline with contextualized multi-turn dialogue, integrated with the existing architecture and their beta MCP server, plus an interactive chat interface.",
+  "status": "in-progress",
+  "duration": null,
+  "tags": ["Python", "Node.js", "LLM", "RAG", "MCP", "OpenRouter"],
+  "images": ["/projects/markethelper/cover.webp"],
+  "github": null,
+  "website": "https://www.markethings.io/",
+  "brief": null,
+  "slides": null,
+  "size": "sm",
+  "spotlight": false,
+  "order": 20
+}

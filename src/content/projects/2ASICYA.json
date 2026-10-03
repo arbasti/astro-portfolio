@@ -4,12 +4,12 @@
   "status": "completed",
   "duration": null,
   "tags": ["Cybersecurity", "Research"],
-  "images": ["/projects/2ASICYA/2ASICYA.png"],
+  "images": ["/projects/2ASICYA/cover.webp"],
   "github": null,
   "website": null,
   "brief": null,
-  "slides": null,
+  "slides": "/projects/2ASICYA/2ASICYA-presentation.pdf",
   "size": "sm",
   "spotlight": false,
-  "order": 3
+  "order": 50
 }
