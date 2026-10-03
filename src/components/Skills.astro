@@ -5,7 +5,16 @@ const skillEntries = await getCollection("skills");
 const skills = skillEntries.map((entry) => entry.data);
 
 const GRID_COLS = 18;
-const GRID_ROWS = 10;
+const BOARD_WIDTH = 560;
+
+// Size the board to roughly match the checklist height (3 cols of h-11 slots, gap-2)
+const checklistRows = Math.ceil(skills.length / 3);
+const checklistHeight = checklistRows * 44 + (checklistRows - 1) * 8;
+const boardChrome = 50; // p-6 padding + border
+const GRID_ROWS = Math.max(
+  10,
+  Math.round((checklistHeight - boardChrome) / (BOARD_WIDTH / GRID_COLS)),
+);
 ---
 
 <section
@@ -22,7 +31,7 @@ const GRID_ROWS = 10;
       <div
         id="snake-grid"
         class="grid gap-0.5"
-        style={`grid-template-columns: repeat(${GRID_COLS}, minmax(0, 1fr)); width: min(85vw, 560px); aspect-ratio: ${GRID_COLS} / ${GRID_ROWS};`}
+        style={`grid-template-columns: repeat(${GRID_COLS}, minmax(0, 1fr)); width: min(85vw, ${BOARD_WIDTH}px); aspect-ratio: ${GRID_COLS} / ${GRID_ROWS};`}
       >
         {Array.from({ length: GRID_COLS * GRID_ROWS }).map((_, i) => (
           <div class="relative aspect-square rounded-sm bg-white/5">
