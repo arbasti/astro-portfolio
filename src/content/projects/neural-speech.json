@@ -7,7 +7,7 @@
   "images": ["/projects/neural-speech/cover.webp"],
   "github": "https://github.com/madmax0978/Neural-speech",
   "website": null,
-  "brief": "/projects/neural-speech/neural-speech-brief.pdf",
+  "brief": null,
   "slides": "/projects/neural-speech/neural-speech-presentation.pdf",
   "size": "sm",
   "spotlight": false,
