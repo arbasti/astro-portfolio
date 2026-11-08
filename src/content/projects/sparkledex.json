@@ -1,0 +1,23 @@
+{
+  "title": "SparkleDex",
+  "description": "A secure, mobile-first full-stack web app to track a mobile game collection and share it with friends through a read-only public link. Built solo with a team workflow: one branch and PR per topic, a CI pipeline on every pull request (lint, type checks, tests, dependency audit, secret scanning) that must pass before merging into a protected main branch, Conventional Commits and automated semantic releases. Security by design: PostgreSQL Row Level Security covered by tests, server-side validation, CSRF protection, httpOnly session cookies, supply-chain checks (gitleaks, Dependabot, SHA-pinned actions) and GDPR-minded data handling. Underway: Docker, continuous delivery to Kubernetes and further hardening.",
+  "status": "in-progress",
+  "duration": null,
+  "tags": [
+    "TypeScript",
+    "Astro",
+    "Supabase",
+    "PostgreSQL",
+    "Zod",
+    "Vitest",
+    "GitHub Actions"
+  ],
+  "images": ["/projects/sparkledex/cover.webp"],
+  "github": "https://github.com/arbasti/SparkleDex",
+  "website": null,
+  "brief": null,
+  "slides": null,
+  "size": "sm",
+  "spotlight": true,
+  "order": 15
+}

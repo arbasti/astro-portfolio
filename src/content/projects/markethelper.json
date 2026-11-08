@@ -1,9 +1,20 @@
 {
   "title": "MarketHelper (PFE)",
-  "description": "Final-year engineering project with Markethings — turning their in-house natural-language engine into a real conversational assistant for sales and marketing teams. Proof of concept of an augmented RAG pipeline with contextualized multi-turn dialogue, integrated with the existing architecture and their beta MCP server, plus an interactive chat interface.",
+  "description": "Final-year engineering project with Markethings, in a team of six — turning their in-house natural-language engine for finding French companies into a conversational assistant for sales and marketing teams. Proof of concept of an augmented RAG pipeline: LLM-based extraction of search criteria, embedding-based mapping of activities to official NAF codes, and multi-turn dialogue to refine a search, integrated with their existing stack and beta MCP server. My part: the CI/CD pipeline — checks on every pull request, secret scanning, branch protection, CI-gated deployments and nightly end-to-end tests — and now application security: auditing the public chat API for abuse and cost risks, and designing server-side identity, rate limiting and professional sign-in.",
   "status": "in-progress",
   "duration": null,
-  "tags": ["Python", "Node.js", "LLM", "RAG", "MCP", "OpenRouter"],
+  "tags": [
+    "Python",
+    "FastAPI",
+    "Next.js",
+    "LLM",
+    "RAG",
+    "MCP",
+    "OpenRouter",
+    "GitHub Actions",
+    "Playwright",
+    "Security"
+  ],
   "images": ["/projects/markethelper/cover.webp"],
   "github": null,
   "website": "https://www.markethings.io/",
@@ -11,5 +22,5 @@
   "slides": null,
   "size": "sm",
   "spotlight": false,
-  "order": 20
+  "order": 10
 }

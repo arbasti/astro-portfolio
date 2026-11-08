@@ -10,6 +10,12 @@ const sizeClasses: Record<string, string> = {
   sm: "md:col-span-1",
   lg: "md:col-span-2",
 };
+
+const statusBadges: Record<string, { label: string; classes: string }> = {
+  completed: { label: "Completed", classes: "bg-[#DCEEDD] text-[#1F6B3A]" },
+  "in-progress": { label: "In progress", classes: "bg-[#FCE4D6] text-[#C1441E]" },
+  "on-hold": { label: "On hold", classes: "bg-[#EFE6FE] text-[#a476f5]" },
+};
 ---
 
 <section
@@ -90,13 +96,9 @@ const sizeClasses: Record<string, string> = {
           )}
 
           <span
-            class={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold ${
-              project.status === "completed"
-                ? "bg-[#DCEEDD] text-[#1F6B3A]"
-                : "bg-[#FCE4D6] text-[#C1441E]"
-            }`}
+            class={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold ${statusBadges[project.status].classes}`}
           >
-            {project.status === "completed" ? "Completed" : "In progress"}
+            {statusBadges[project.status].label}
           </span>
         </div>
 
